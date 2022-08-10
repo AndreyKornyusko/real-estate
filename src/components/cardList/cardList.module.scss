@@ -1,0 +1,17 @@
+@import "../../styles/lib/variables";
+@import "../../styles/lib/mixins";
+
+.cardList {
+  display: flex;
+  flex-wrap: wrap;
+  width: 1210px;
+  margin: 0 auto;
+  padding-top: 45px;
+  .cardWrap {
+    margin-right: 50px;
+    margin-bottom: 25px;
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+  }
+}

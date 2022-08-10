@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react";
 import Card from "../card";
+import styles from './cardList.module.scss'
 import properties from "../../properties.json";
 import { DataContext } from "../../context/dataContextProvider";
 import { FiltersEnum } from "../../interfaces/data.interaface";
@@ -26,10 +27,10 @@ const CardList = () => {
   }, [context?.filter]);
 
   return (
-    <div>
+    <div className={styles.cardList}>
       {filteredData &&
         filteredData.map((item, index) => (
-          <div key={index}>
+          <div className={styles.cardWrap} key={index}>
             <Card cardItem={item} />
           </div>
         ))}

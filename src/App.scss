@@ -1,3 +1,17 @@
+@import "./styles/lib/mixins";
+@import "./styles/lib/variables";
+
 .App {
   text-align: center;
+  padding-top: 29px;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 100px;
+}
+.mainTitle {
+  @include font-control(34px, 44px, $fontWeight: 700, $fontStyle: normal);
+  font-family: $font;
+  text-align: center;
+  color: $dark-text;
+  margin-bottom: 17px;
 }

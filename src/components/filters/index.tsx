@@ -27,7 +27,8 @@ const Filters = () => {
   };
   return (
     <div className={styles.filters}>
-      <div>Filters:</div>
+      <div className={styles.subTitle}>Filters:</div>
+      <div className={styles.radioBtnWrap}>
       <Radiobutton
         onClick={handleClick}
         checked={checkedItem.all}
@@ -46,6 +47,8 @@ const Filters = () => {
         id={FiltersEnum.SOLD}
         label="Sold"
       />
+      </div>
+     
     </div>
   );
 };
