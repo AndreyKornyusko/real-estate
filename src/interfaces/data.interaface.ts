@@ -1,7 +1,7 @@
 export enum FiltersEnum {
-  ALL,
-  ACTIVE,
-  SOLD,
+  ALL="All",
+  ACTIVE="Active",
+  SOLD="Sold",
 }
 
 export interface Photo {

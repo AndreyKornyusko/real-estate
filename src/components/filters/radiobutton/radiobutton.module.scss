@@ -1,0 +1,23 @@
+@import '../../../styles/lib/variables';
+
+.radiobutton {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .checkbox {
+    width: 28px;
+    height: 28px;
+    background: #ffffff;
+    border: 1px solid #dbe2ea;
+    box-shadow: 0px 4px 8px rgba(44, 39, 56, 0.04);
+    border-radius: 4px;
+  }
+  .label {
+    font-family: $font;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 21px;
+    color: #756f86;
+  }
+}

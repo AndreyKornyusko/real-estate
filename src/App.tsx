@@ -1,11 +1,13 @@
-import CardList from './components/cardList'
-import './App.scss';
+import CardList from "./components/cardList";
+import Filters from "./components/filters";
+import "./App.scss";
 
 function App() {
   return (
     <div className="App">
       <h1>Real Estate</h1>
-       <CardList/>
+      <Filters />
+      <CardList />
     </div>
   );
 }
