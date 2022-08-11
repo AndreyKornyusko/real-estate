@@ -1,14 +1,29 @@
 @import "../../styles/lib/variables";
 @import "../../styles/lib/mixins";
 
-
 .card {
+  position: relative;
   width: 370px;
   height: 592px;
   background: #ffffff;
   box-shadow: 0px 16px 56px rgba(44, 39, 56, 0.08);
   border-radius: 5px;
-
+  padding-bottom: 58px;
+  .sold {
+    position: absolute;
+    top: 6px;
+    right: 9px;
+    width: 60px;
+    height: 34px;
+    background: #ff7171;
+    box-shadow: 0px 1px 2px rgba(44, 39, 56, 0.0001),
+      0px 2px 4px rgba(44, 39, 56, 0.08);
+    border-radius: 17px;
+    @include font-control(14px, 34px, $fontWeight: 500, $fontStyle: normal);
+    color: #ffffff;
+    text-align: center;
+    z-index: 1;
+  }
   .cardImg {
     display: block;
     width: 370px;
@@ -29,20 +44,27 @@
       margin-bottom: 4px;
     }
     .address {
+      width: 342px;
       @include font-control(20px, 28px, $fontWeight: 600, $fontStyle: normal);
       color: $dark-text;
       text-align: left;
       margin-bottom: 10px;
+      white-space: nowrap; 
+      overflow: hidden;
+      text-overflow: ellipsis; 
     }
     .mainPointWrap {
+      margin-bottom: 18px;
       .pointWrap {
         display: flex;
         align-items: center;
+        margin-bottom: 6px;
       }
       .point {
         display: flex;
         align-items: center;
         margin-right: 8px;
+        height: 30px;
         .dot {
           width: 12px;
           height: 12px;
@@ -61,6 +83,82 @@
             $fontStyle: normal
           );
           color: $light-text;
+        }
+      }
+    }
+    .virtualTours {
+      .virtualTour {
+        position: relative;
+        width: 339px;
+        height: 33px;
+        padding-top: 8px;
+        padding-right: 40px;
+        padding-left: 15px;
+        padding-bottom: 7px;
+        background: #f2ac57;
+        border-radius: 10px;
+        margin-bottom: 10px;
+        text-align: left;
+        @include font-control(14px, 18px, $fontWeight: 500, $fontStyle: normal);
+        color: #ffffff;
+        cursor: pointer;
+        img {
+          position: absolute;
+          display: block;
+          top: 1px;
+          right: 3px;
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+    .listedBy {
+      @include font-control(16px, 22px, $fontWeight: 400, $fontStyle: normal);
+      color: $dark-text;
+      text-align: left;
+      margin-bottom: 10px;
+    }
+    .detailsWrap {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      padding-right: 23px;
+      padding-bottom: 24px;
+      z-index: 1;
+      .details {
+        height: 34px;
+        width: 100px;
+        background: #ffffff;
+        border: 1px solid #dbe2ea;
+        box-shadow: 0px 1px 2px rgba(44, 39, 56, 0.0001),
+          0px 2px 4px rgba(44, 39, 56, 0.08);
+        border-radius: 3px;
+        cursor: pointer;
+        padding: 8px 28px;
+        @include font-control(14px, 18px, $fontWeight: 500, $fontStyle: normal);
+        text-align: center;
+        color: #7c9cbf;
+        margin-right: 16px;
+      }
+      .like {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 34px;
+        height: 34px;
+        background: #0880ae;
+        box-shadow: 0px 6px 12px rgba(44, 39, 56, 0.08),
+          0px 12px 24px rgba(44, 39, 56, 0.16);
+        border-radius: 3px;
+        cursor: pointer;
+        img {
+          display: block;
+          width: 21px;
+          height: 21px;
         }
       }
     }
