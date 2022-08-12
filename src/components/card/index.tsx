@@ -44,7 +44,7 @@ const CardItem = ({ cardItem }: ICardItem) => {
         <div className={styles.virtualTours}>
           {cardItem?.links?.virtualTours?.length &&
             cardItem?.links?.virtualTours.map((item, index) => (
-              <div className={styles.virtualTour}>
+              <div key={index} className={styles.virtualTour}>
                 <div className={styles.virtualTourText}>{item?.category}</div>
                 <img src={arrow} alt="arrow" />
               </div>
