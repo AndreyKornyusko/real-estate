@@ -142,7 +142,6 @@
         @include font-control(14px, 18px, $fontWeight: 500, $fontStyle: normal);
         text-align: center;
         color: #7c9cbf;
-        margin-right: 16px;
       }
       .like {
         display: flex;
@@ -150,6 +149,7 @@
         align-items: center;
         width: 34px;
         height: 34px;
+        border: none;
         background: #0880ae;
         box-shadow: 0px 6px 12px rgba(44, 39, 56, 0.08),
           0px 12px 24px rgba(44, 39, 56, 0.16);

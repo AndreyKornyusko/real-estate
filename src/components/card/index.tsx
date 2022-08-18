@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styles from "./card.module.scss";
 import { Card } from "../../interfaces/data.interaface";
 import arrow from "../../assets/images/arrow-right.svg";
@@ -44,20 +45,21 @@ const CardItem = ({ cardItem }: ICardItem) => {
         <div className={styles.virtualTours}>
           {cardItem?.links?.virtualTours?.length &&
             cardItem?.links?.virtualTours.map((item, index) => (
-              <div key={index} className={styles.virtualTour}>
-                <div className={styles.virtualTourText}>{item?.category}</div>
-                <img src={arrow} alt="arrow" />
-              </div>
+              <Link key={index} to="/">
+                <div className={styles.virtualTour}>
+                  <div className={styles.virtualTourText}>{item?.category}</div>
+                  <img src={arrow} alt="arrow" />
+                </div>
+              </Link>
             ))}
         </div>
         <div className={styles.listedBy}>
           Listed by: {cardItem?.listAgentFullName}
         </div>
         <div className={styles.detailsWrap}>
-          <div className={styles.details}>Details</div>
-          <div className={styles.like}>
-            <img src={heart} alt="like" />
-          </div>
+          <Link to={`details/${cardItem?.id}`}>
+            <div className={styles.details}>Details</div>
+          </Link>
         </div>
       </div>
     </div>
